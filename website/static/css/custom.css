@@ -1,16 +1,20 @@
 /* body */
 body {
   font-family: "Merriweather";
-  background: url('../img/bg/bg33.png') repeat center center fixed;
+background: rgba(226,226,226,1);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
 
+/* navbar */
+
+
+
 /* main container */
 #main {
-background-image: -webkit-linear-gradient(left, rgba(192,192,192,1)); 
+  background-image: -webkit-linear-gradient(left, rgba(192,192,192,1)); 
   background-image: -moz-linear-gradient(left, rgba(192,192,192,1));
   background-image: -ms-linear-gradient(left, rgba(192,192,192,1));
   background-image: -o-linear-gradient(left, rgba(192,192,192,1)); 
@@ -29,11 +33,11 @@ background-image: -webkit-linear-gradient(left, rgba(192,192,192,1));
   margin: 2em 0 0 2em;
 }
 #main .row ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 #main .row ul li {
-	line-height: 2em;
-	display: block;
+  line-height: 2em;
+  display: block;
 }
 #main .row ul li a{
   color: #1a1b1f;
@@ -50,92 +54,83 @@ background-image: -webkit-linear-gradient(left, rgba(192,192,192,1));
 
 /* container-fluid */
 .container-fluid {
-	background: #212529;
-	padding: 0.5em;
-	color: #fff;
-	opacity: 0.6;
-	-webkit-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
-	-moz-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
-	box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
+  background: #212529;
+  padding: 1em 0 0 1em;
+  color: #fff;
+  opacity: 0.7;
+  -webkit-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
+  -moz-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
+  box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
 }
 .container-fluid h1 {
-	font-size: 56px;
-	font-family: "Anton", "Merriweather";
-	color: #fff;
-	text-shadow: 4px 4px 2px rgba(85, 150, 150, 0.46);
+  font-size: 56px;
+  font-family: "Anton", "Merriweather";
+  color: #ffffff;
+}
+
+.container-fluid h3 {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 0 auto;
+  background-color: #CE3323;
+  width: 35%;
 }
 .container-fluid ul {
-	font-size: 18px;
-	font-family: "Anton", "Merriweather";
-	list-style-type: none;
+  font-size: 18px;
+  font-family: "Anton", "Merriweather";
+  list-style-type: none;
 }
 .container-fluid ul li{
-	display: inline;
-}
-.container-fluid ul li a{
-	background: #212529;
-	color: orange;
-	padding: 0.5em;
-	text-decoration: none;
-}
-.container-fluid ul li a:hover{
-	background: orange;
-	color: #212529;
-	padding: 0.5em;
-	text-decoration: none;
+  display: inline;
 }
 .container-fluid .links{
-	width: 100%;
-	text-align: center;
+  width: 100%;
+  text-align: center;
 }
+
 
 /* footer */
 footer {
-	padding: 0.5em;
-  	background: #1a1b1f;
-	font-size: 18px;
+  padding: 0.5em;
+    background: #1a1b1f;
+  font-size: 18px;
 }
 footer ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 footer ul li {
-	line-height: 2em;
+  line-height: 2em;
 }
 footer ul li a {
-	text-decoration: none;
+  text-decoration: none;
 }
 footer ul li a:hover {
-	text-decoration: none;
-	color: orange;
+  text-decoration: none;
+  color: #CD6509;
 }
 .footer-left h3 {
   color: ghostwhite;
   border-radius: 0.1em;
   padding: 0.1em;
-  border-bottom: solid 0.2em orange;
+  border-bottom: solid 0.2em #C95916;
 }
 footer .col-md-6 .row {
-	 background: #212529;
-	margin: 1em 0 0 1em;
-	padding: 0.5em;
-	text-align: center;
-	border: solid 0.1em #212529;
-	border-left: 0.4em orange;
-	border-radius: 0.3em;
-}
-footer .col-md-6 .row  ul li a {
-	text-decoration: none;
-	color: orange;
-}
-footer .col-md-6 .row {
-	text-decoration: none;
-	color: orange;
+  background: #212529;
+  color: #C95916;
+  margin: 1em 0 0 1em;
+  padding: 0.5em;
+  text-align: center;
+  border: solid 0.1em #212529;
+  border-left: 0.4em #CD6509;
+  border-radius: 0.3em;
 }
 .bottom {
-	margin: 1em 0 0 1em;
-	padding: 0.5em;
-	color: orange;
-	text-align: center;
+  margin: 1em 0 0 1em;
+  padding: 0.5em;
+  color: #C95916;
+  text-align: center;
 }
 
 /* general styles */ 
@@ -172,4 +167,41 @@ hr.divider {
 .slide-in.active {
     opacity:1;
     transform:translateX(0%) scale(1);
+}
+
+/* buttons */
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.orange {
+  background-color: #C95916;
+  width: 15%;
+}
+
+.orange:hover {
+  background-color: #FF6656;
+  color: #CD6509;
+}
+
+
+.info {
+  background-color: #C95916;
+  width: 45%;
+}
+
+.info:hover {
+  background-color: #FF6656;
+  color: #CD6509;
+}
+
+.item {
+  max-height: 600px;
 }
