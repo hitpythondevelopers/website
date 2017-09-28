@@ -14,17 +14,19 @@ background-image: -webkit-linear-gradient(left, rgba(192,192,192,1));
   background-image: -moz-linear-gradient(left, rgba(192,192,192,1));
   background-image: -ms-linear-gradient(left, rgba(192,192,192,1));
   background-image: -o-linear-gradient(left, rgba(192,192,192,1)); 
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 #main .row {
   border-bottom: solid 0.5em #212529;
   border-radius: 0.2em;
-  margin-bottom: 2em;
   padding: 0.5em;
   background: #fff;
   opacity: 0.8;
   -webkit-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
   -moz-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
   box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
+  margin: 2em 0 0 2em;
 }
 #main .row ul {
 	list-style-type: none;
@@ -50,13 +52,11 @@ background-image: -webkit-linear-gradient(left, rgba(192,192,192,1));
 .container-fluid {
 	background: #212529;
 	padding: 0.5em;
-	margin-bottom: 1em;
 	color: #fff;
 	opacity: 0.6;
 	-webkit-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
 	-moz-box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
 	box-shadow: 0px 1px 7px 3px rgba(192,192,192,1);
-	padding: 0.5em;
 }
 .container-fluid h1 {
 	font-size: 56px;
