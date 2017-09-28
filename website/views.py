@@ -4,5 +4,5 @@ from website import app
 
 @app.route('/')
 def index():
-	title = 'HITPy Dev'
+	title = "FnF Up"
     return render_template('index.html', title=title)

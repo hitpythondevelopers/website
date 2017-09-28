@@ -1,31 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> {{title }}</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <head>
+  <title> HITPy Devs</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Emmanuel-Melon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font-awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Stylesheets -->
+    <link href="{{url_for('static', filename='css/custom.css')}}" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- normalize.css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <!-- google fonts api -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  </head>
 
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="{{url_for('static', filename='css/custom.css')}}" rel="stylesheet">
+  <body>    
+  
+  <div class="container-fluid"> 
+    <div class="content">
+      <h1 class="text-center">HITPy Devs</h1><hr>
+      <h3 class="text-center">Harare Institute of Technology</h3>
+    </div>
+  </div>
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- navigation -->
+  <nav class="nav navbar-default">
+      
+  </nav>
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- main container -->
+  <div class="container">
+      {{title}}
 
+  <!-- hero section -->
+  <div id="hero" class="row"> 
+    <h3 class="text-center">The Hero Section</h3>
+    <hr class="divider"> <!-- divider class --> 
+    <div class="col-md-4">
+      <img src="img/sliders/slide1.jpg" class="img-responsive align-left slide-in"> 
+    </div><!-- col-md-4 -->
+    <div class="col-md-8"> 
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor. Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor. Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor. Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor.</p>
+      <button class="btn btn-info">More</button>
+    </div><!-- col-md-8 -->
+  </div><!-- row -->
 
-    </head>
-    <body>
-        <h1> Hello HIT Python Developers </h1> <hr>
+  <!-- features section -->
+  <div id="features" class="row"> 
+    <h3 class="text-center">Features Section</h3>
+    <hr class="divider"> <!-- divider class --> 
+    <div class="col-md-4">  
+      <img src="img/sliders/slide2.jpg" class="img-responsive">
+      <h3 class="text-center">PyCon</h3>
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+      </p>
+      <button class="btn btn-info">More</button>
+    </div><!-- col-md-4 -->
+    <div class="col-md-4">  
+      <img src="img/sliders/slide3.jpg" class="img-responsive">
+      <h3 class="text-center">PyCon</h3>
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle
+      .</p>
+      <button class="btn btn-info">More</button>
+    </div><!-- col-md-4 -->
+    <div class="col-md-4">  
+      <img src="img/sliders/slide2.jpg" class="img-responsive">
+      <h3 class="text-center">PyCon</h3>
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+      </p>
+      <button class="btn btn-info">More </button>
+    </div><!-- col-md-4 -->
+  </div><!-- row --> 
 
-        <!-- Latest compiled and minified jquery-->
+  <!-- news & events section -->
+  <div id="news" class="row"> 
+    <h3 class="text-center">Events &amp; News Section</h3>
+    <hr class="divider"> <!-- divider class --> 
+    <div class="col-md-6"> 
+      <h3 class="text-center"> Events</h3>
+      <hr class="divider"> <!-- divider class -->
+        <ul>
+          <li>
+            <h3><a href="#">Some catchy headline</a></h3>
+            <p> Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+          </p>
+          </li>     
+          <li>
+            <h3><a href="#">More catchy headlines</a></h3>
+            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+            </p>
+          </li>     
+          <li><h3><a href="#">You thought I was gonna stop?</a></h3>
+            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+            </p>
+          </li>     
+        </ul>
+        <button class="btn btn-info">More Events </button>
+    </div><!-- col-md-6 -->
+    <div class="col-md-6"> 
+      <h3 class="text-center">Events</h3>
+      <hr class="divider"> <!-- divider class -->
+        <ul>
+          <li>
+            <h3><a href="#">Some catchy headline</a></h3>
+            <p> Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+          </p>
+          </li>     
+          <li>
+            <h3><a href="#">More catchy headlines</a></h3>
+            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+            </p>
+          </li>     
+          <li><h3><a href="#">You thought I was gonna stop?</a></h3>
+            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
+            </p>
+          </li>     
+        </ul>
+        <button class="btn btn-info">More Events</button>
+    </div><!-- col-md-6 -->
+  </div><!-- row --> 
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+  <!-- team section --> 
+  <div id="team" class="row"> 
+    <h3 class="text-center">Check Out Our Team</h3>
+    <hr class="divider"><!-- divider class --> 
+    <div class="col-md-4">  
+      <img src="img/sliders/slide2.jpg" class="img-responsive">
+      <h3 class="text-center">PyCon</h3>
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
+      <button class="btn btn-info">More</button>
+    </div><!-- col-md-4 --> 
+    <div class="col-md-4">  
+      <img src="img/sliders/slide3.jpg" class="img-responsive">
+      <h3 class="text-center">PyCon</h3>
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
+      <button class="btn btn-info">More</button>
+    </div> <!-- col-md-4 --> 
+    <div class="col-md-4">  
+      <img src="img/sliders/slide2.jpg" class="img-responsive">
+      <h3 class="text-center">PyCon</h3>
+      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
+      <button class="btn btn-info">More</button>
+    </div><!-- col-md-4 --> 
+  </div><!-- row --> 
+</div><!-- container --> 
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+  <!-- links & tutorials sections --> 
+  <div class="container-fluid">
+    <div class="links"> 
+    <h3 class="text-center"> Orange background, black text</h3> 
+      <hr class="divider"> <!-- divider class --> 
+      <div class="container"> 
+        <ul>
+          <li><a href="https://www.python.org" target="_blank">Python.org</a> </li>
+          <li><a href="http://flask.pocoo.org" target="_blank">Flask</a></li>
+          <li><a href="https://www.djangoproject.com" target="_blank">Django</a></li>
+          <li><a href="http://scikit-learn.org" target="_blank">Scikit</a></li>
+          <li><a href="http://numpy.org" target="_blank">NumPy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- container-fluid --> 
+
+  <hr class="divider"><!-- divider class --> 
+  
+  <!-- footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="footer-left"> 
+        <div class="col-md-2"> 
+          <h3 class="text-center"> Activites</h3>
+            <ul>
+              <li><a href="#">Django</a></li>
+              <li><a href="#">Flask</a></li>
+              <li><a href="#">Hackathons</a></li>
+            </ul>
+        </div><!-- col-md-2 -->
+        <div class="col-md-2"> 
+          <h3 class="text-center"> Blog</h3>
+            <ul>
+              <li><a href="#">Posts</a></li>
+              <li><a href="#">Tags</a></li>
+              <li><a href="#">Archive</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+        </div><!-- col-md-2 -->
+        <div class="col-md-2"> 
+          <h3 class="text-center"> Portal</h3>
+          <ul>
+            <li><a href="#">Projetcs</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Home</a></li>
+            </ul>
+        </div><!-- col-md-2 -->
+      </div>
+        
+      <div class="col-md-6"> 
+        <div class="row" id="social"> 
+          <a href="#">Twitter</a>
+        </div>
+        <div class="row" id="contact-us"> 
+          <a href="#">mail.hitpy@co.zw </a>
+        </div>
+        <div class="row" id="address"> 
+          <a href="#">Ganges Road, Belvedere</a>
+        </div>
+      </div><!-- col-md-6 -->
+    </div><!-- row -->
+    <hr class="divider"> 
+    <div class="bottom"> 
+      <p class="text-center"> Copyright &copy; HITPy Dev 2017 </p>
+    </div>
+  </div>
+  </footer> 
+
+    <!-- Latest compiled and minified jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </body>
 </html>
