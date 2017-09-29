@@ -5,7 +5,7 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from website import app
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 
@@ -25,13 +25,17 @@ class RegisterForm(Form):
 
 #routing the register request
 @app.route('/register', methods =['GET','POST'])
-def index():
+def register():
     form = RegisterForm(request.form)
+    
     if request.method == 'POST' and form.validate():
-
+        
         name = form.name.data
         email = form.email.data
         username = form.username.data
         password = sha256_crypt.encrypt(str(form.password.data))
+        
+        return render_template('register.html')
 
-    return render_template('index.html')
+
+    return render_template('register.html')
