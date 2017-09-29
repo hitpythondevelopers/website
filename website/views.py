@@ -1,26 +1,12 @@
 from flask import render_template,  flash, redirect, url_for, session,request, logging
 from passlib.hash import sha256_crypt
-from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 
 from website import app
+from forms import RegisterForm
 
 @app.route('/')
 def home():
     return render_template('index.html')
-
-
-
-#implementing the registration form with validation
-class RegisterForm(Form):
-	name = StringField('Name',[validators.Length(min=1, max= 50)])
-	username = StringField('Username',[validators.Length(min=4,max=25)])
-	email = StringField('Email',[validators.Length(min=6, max =50)])
-	password = PasswordField('Password',[
-		validators.DataRequired(),
-		validators.EqualTo('confirm',message='Password does not match')
-
-	])
-	confirm = PasswordField('Confirm Password')
 
 
 #routing the register request
