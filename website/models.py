@@ -6,7 +6,7 @@ from website import db
 
 from sqlalchemy import Table, Column, Integer, String
 from sqlalchemy.orm import mapper
-from yourapplication.database import metadata, db_session
+from website.database import metadata, db_session
 
 class User(object):
     query = db_session.query_property()
