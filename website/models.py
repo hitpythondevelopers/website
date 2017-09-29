@@ -8,27 +8,6 @@ from sqlalchemy import Table, Column, Integer, String
 from sqlalchemy.orm import mapper
 from website.database import metadata, db_session
 
-class User(object):
-    query = db_session.query_property()
-
-    def __init__(self, name=None, email=None, username = None, password = None):
-        self.name = name
-        self.email = email
-        self.username = username
-        self.password = password
-
-    def __repr__(self):
-        return '<User %r>' % (self.name)
-
-users = Table('users', metadata,
-    Column('id', Integer, primary_key=True),
-    Column('name', String(50), unique=True),
-    Column('email', String(120), unique=True)
-    Column('username', VarChar(120), unique=True)
-    Column('password', VarChar(120), unique=True)
-)
-mapper(User, users)
-'''
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
@@ -60,4 +39,3 @@ class User(db.Model, UserMixin):
         self.email = email
         self.password_hash = generate_password_hash(password_hash)
 
-'''
