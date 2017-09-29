@@ -11,7 +11,7 @@ UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/')
 app = Flask(__name__)
 app.config.from_object('config')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-#db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 #login_manager = LoginManager()
 #login_manager.init_app(app)
 #login_manager.session_protection = "strong"

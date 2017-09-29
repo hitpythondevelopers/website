@@ -4,6 +4,9 @@ from passlib.hash import sha256_crypt
 from website import app
 from forms import RegisterForm
 
+from yourapplication.database import db_session
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -25,3 +28,7 @@ def register():
 
 
     return render_template('register.html')
+
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    db_session.remove()
