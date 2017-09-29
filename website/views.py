@@ -24,13 +24,8 @@ def register():
         username = form.username.data
         password = sha256_crypt.encrypt(str(form.password.data))
         
-        return render_template('register.html')
+        return redirect(url_for('index'))
 
-    return render_template('register.html')
-
-@app.teardown_appcontext
-def shutdown_session(exception=None):
-    db_session.remove()
 
     return render_template('register.html', form=form)
 
