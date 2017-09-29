@@ -3,7 +3,7 @@ from os.path import join,dirname, realpath
 from flask import Flask 
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from flask_basicauth import BasicAuth
+#from flask_basicauth import BasicAuth
 
 
 UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/')

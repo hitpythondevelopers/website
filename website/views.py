@@ -27,8 +27,12 @@ def register():
         return render_template('register.html')
 
 
+<<<<<<< HEAD
     return render_template('register.html')
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
     db_session.remove()
+=======
+    return render_template('register.html', form=form)
+>>>>>>> 30726528512e24ed955a889d752146562efb471b
