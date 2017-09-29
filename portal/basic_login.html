@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.min.css) }}"> <!--using bootstrap-->
+	
+	
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form action="" method="POST"> <!-- using the post method to request get details and then to the server-->
+						<div class="input-details">
+							<span class="input-group-addon" id="basic-addon3">Your Username</span> <!--entering the usernsme of the member-->
+							<input type="text" class="form-control" name="username" aria-describedby="basic-addon3">
+							
+						</div>
+						<br />
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon3">Your Password</span> <!--entering the password of the member-->
+							<input type="text" class="form-control" id="password" aria-describedby="basic-addon3">
+						</div>
+						<br />
+						<input type="submit" value="login" class="btn btn-default btn-sm"> <!--submut button-->
+					</form>
+				</div>
+			</div>
+		</div>
+	
+	</body>
+
+</html>
