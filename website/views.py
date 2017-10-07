@@ -29,3 +29,28 @@ def register():
 
     return render_template('register.html', form=form)
 
+@app.route('/login', methods = ['GET','POST'])
+def login():
+    form = LoginForm(request.form)
+
+    if request.method == 'GET' and form.validate():
+
+        username = form.username.data
+        password = sha256_crypt.decrypt(str(form.password.data))
+
+        return redirect(url_for('index'))
+    return render_template('login.html', form = form)
+
+@app.route('/add')
+def add():
+    return render_template('add.html')
+
+@app.route('/addpost', methods = ['POST'])
+def addpost():
+    title = request.form['title']
+    subtitle = request.form['subtitle']
+    author = request.form['author']
+    content = request.form['content']
+
+    return '<h1>Title: {}  Subtitle: {} Author: {} Content: {}</h1>'.format(title, subtitle, author, content)
+
