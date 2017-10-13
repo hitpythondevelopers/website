@@ -20,7 +20,7 @@ class RegisterForm(FlaskForm):
 	confirm = PasswordField('Confirm Password')
 class Login(FlaskForm):
 	username = StringField('Username',[validators.Length(min=4, max =25)])
-	password = PasswordField('Password',
+	password = PasswordField('Password',[
 		validators.DataRequired(),
 		validators.EqualTo('confirm', message = 'Password does not match')
 	])

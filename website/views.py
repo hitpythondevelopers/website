@@ -41,6 +41,12 @@ def login():
         return redirect(url_for('index'))
     return render_template('login.html', form = form)
 
+
+@app.route('/post/<int:post_id>')
+def post(post_id):
+    post = Blogpost.query.filter_by(id=post_id).one()
+
+    return render_template('post.html', post=post)
 @app.route('/add')
 def add():
     return render_template('add.html')
@@ -51,6 +57,13 @@ def addpost():
     subtitle = request.form['subtitle']
     author = request.form['author']
     content = request.form['content']
+    
+    post = Blogpost(title=title, subtitle=subtitle, author=author, content=content, date_posted=datetime.now())
 
-    return '<h1>Title: {}  Subtitle: {} Author: {} Content: {}</h1>'.format(title, subtitle, author, content)
+    db.session.add(post)
+    db.session.commit()
+
+    return redirect(url_for('index'))
+
+
 

@@ -39,3 +39,11 @@ class User(db.Model, UserMixin):
         self.email = email
         self.password_hash = generate_password_hash(password_hash)
 
+class Blogpost(db.Model):
+    id = db.Column(db.Integer, primary_key =True)
+    title = db.Column(db.String(50))
+    subtitle = db.Column(db.String(50))
+    author = db.Column(db.String(20))
+    data_posted =db.Column(db.DateTime)
+    content = db.Column(db.Text)
+
