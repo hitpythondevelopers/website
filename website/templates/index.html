@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Home </title>
+        <title>HIT Python Developers- Member Portal </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{{url_for('static', filename ='css/bootstrap.min.css')}}" rel ="stylesheet">
+        .navbar{
+            
+                height: 40px;
+                width:auto;
+            
+            }
+            
+            .navbar ul li{
+                list-style:none;
+                text-decoration:none;
+                display: inline-block;
+                padding: 10px;
+                padding-right:20px;
+                float: right;
+                }
+            .navbar ul li a { 
+                text-decoration: none;
+                color:#FFF;
+                font-family:Calibri;
+                }
+            .navbar ul li a:hover {
+                color: #6be0d6;}
+            .navbar ul li a:active{
+                color: #6be0d6;
+                }
+            .navbar-default{
+                background:transparent;
+                background-image:none;
+                border-color:transparent;
+                box-shadow:none;
+                  }
     </head>
     <body>
-        <h2> Hello HIT Python Developers </h2>
-    
+        
+    <h3>Member Portal</h3>
+    <p>You are logged in as <strong>{{(username)}}</strong></p>
+    <div id="navbar"> 
+        <ul> 
+          <li><a href="#">Profile</a></li> 
+          <li><a href="#">Projects</a></li> 
+          <li><a href="#">Personal Rating</a></li> 
+          <li><a href="#">Contact Details</a></li> 
+          
+        </ul> 
+      </div> 
+
     </body>
 </html>
