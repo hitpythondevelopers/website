@@ -39,8 +39,7 @@
               <h1>{{ post.title }}</h1>
               <h2 class="subheading">{{ post.subtitle }}</h2>
               <span class="meta">Posted by
-                {{ post.author }}
-                on August 24, 2017</span>
+                {{ post.author }}on {{ post.date_posted.strftime('%B %d , %Y') }}</span>
             </div>
           </div>
         </div>
