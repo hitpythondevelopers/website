@@ -13,9 +13,13 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(80), unique=True)
     name = db.Column(db.String(100))
     surname = db.Column(db.String(100))
+    date_of_birth = db.Column(db.String(20))
     email = db.Column(db.String(120), unique=True)
     phone_number = db.Column(db.String(80), unique=True)
     twitter_handle = db.Column(db.String(80),unique=True)
+    facebook=db.Column(db.String(80))
+    image = db.Column(db.)
+    biography = db.Column(db.String(1000))
     password_hash = db.Column(db.String(80))
    
     @property
