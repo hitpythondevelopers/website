@@ -20,10 +20,12 @@ def Register():
     if request.method == 'POST' and form.validate():
         
         name = form.name.data
+        date_of_birth = form.date_of_birth.data
         email = form.email.data
         username = form.username.data
         phone_number = form.phonenumber.data
         twitter_handle = form.twitter.data
+        facebook = form.facebook.data
         password = sha256_crypt.encrypt(str(form.password.data))
         
         return redirect(url_for('index'))
