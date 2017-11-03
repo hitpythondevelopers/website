@@ -16,3 +16,4 @@ BASIC_AUTH_PASSWORD = 'admin'
 
 #Uploads 
 UPLOAD_FOLDER_LOGO = join(dirname(realpath(__file__)), 'static/images/')
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
