@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
     phone_number = db.Column(db.String(80), unique=True)
     twitter_handle = db.Column(db.String(80),unique=True)
     facebook=db.Column(db.String(80))
-    image = db.Column(db.)
+    image = db.Column(db.String(1000))
     biography = db.Column(db.String(1000))
     password_hash = db.Column(db.String(80))
    
