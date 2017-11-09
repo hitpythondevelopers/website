@@ -9,6 +9,7 @@ from forms import RegisterForm
 
 @app.route('/')
 def index():
+    #posts = Blogpost.query.all()
     return render_template('index.html')
 
 
@@ -48,10 +49,12 @@ def post1():
     
 
 
+
 @app.route('/post/<int:post_id>')
 def post(post_id):
     post = Blogpost.query.filter_by(id=post_id).one()
 
+    date_posted = post.date_posted.strftime('%B %d , %Y')
     return render_template('post.html', post=post)
 @app.route('/add')
 def add():
