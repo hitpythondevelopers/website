@@ -1,3 +1,5 @@
+# this file allows you to migrate your database to the latest changes you have made 
+
 import imp
 from migrate.versioning import api
 from website import db

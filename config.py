@@ -1,3 +1,5 @@
+# this file contains all your application's configuration settings
+
 import os 
 from os.path import join,dirname, realpath
 
