@@ -4,13 +4,9 @@ from flask_login import UserMixin
 from werkzeug.security import check_password_hash, generate_password_hash
 from website import db 
 
-from sqlalchemy import Table, Column, Integer, String
-from sqlalchemy.orm import mapper
-from website.database import metadata, db_session
-
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True)
+    username = db.Column(db.String(120), unique=True)
     name = db.Column(db.String(100))
     surname = db.Column(db.String(100))
     email = db.Column(db.String(120), unique=True)
@@ -39,6 +35,7 @@ class User(db.Model, UserMixin):
         self.email = email
         self.password_hash = generate_password_hash(password_hash)
 
+'''
 class Blogpost(db.Model):
     id = db.Column(db.Integer, primary_key =True)
     title = db.Column(db.String(50))
@@ -46,4 +43,6 @@ class Blogpost(db.Model):
     author = db.Column(db.String(20))
     data_posted =db.Column(db.DateTime)
     content = db.Column(db.Text)
+
+    '''
 
