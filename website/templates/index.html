@@ -1,316 +1,1097 @@
 <!DOCTYPE html>
-<html lang="en">
-  
-  <head>
-  <title> HITPy Devs</title>
-    <meta charset="UTF-8">
-    <meta name="author" content="Emmanuel-Melon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- font-awesome -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom Stylesheets -->
-    <link href="../static/css/custom.css" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- normalize.css -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
-    <!-- google fonts api -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-  </head>
+<html class="nojs html css_verticalspacer" lang="en-US">
+ <head>
 
-  <body>    
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.0.0.379"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-  <div class="container-fluid"> 
-    <div class="content">
-      <h1 class="text-center">HITPy Devs</h1><hr>
-      <h2 class="text-center">Harare Institute of Technology</h2>
+  <script type="text/javascript">
+   // Update the 'nojs'/'js' class on the html node
+document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+
+// Check that all required assets are uploaded and up-to-date
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "jquery.scrolleffects.js", "jquery.museresponsive.js", "require.js", "index.css"], "outOfDate":[]};
+</script>
+  
+  <link rel="shortcut icon" href="{{ url_for('static', filename='landingPage/images/favicon.ico')}}"/>
+  <title>HIT Python Developers</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landingPage/css/site_global.css') }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landinPage/css/index.css') }}" id="pagesheet"/>
+  <!-- IE-only CSS -->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/nomq_index.css?crc=313206075" id="nomq_pagesheet"/>
+  <![endif]-->
+    <!--HTML Widget code-->
+  
+<style>
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+</style>
+
+<video id="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"> 
+<source src=" " type="video/webm"> 
+<source src="{{ url_for('static', filename='landingPage/assets/footage.mp4') }}" type="video/mp4"> 
+This browser does not happen to support video</video>
+
+<style>
+	.fb-comments, .fb-comments * {
+		width:100% !important;
+	}
+</style>
+
+ </head>
+ <body>
+
+  <!--HTML Widget code-->
+  
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+  
+  <div class="breakpoint active" id="bp_infinity" data-min-width="1028"><!-- responsive breakpoint node -->
+   <div class="clearfix" id="page"><!-- group -->
+    <div class="clearfix grpelem" id="pabout-us"><!-- column -->
+     <a class="anchor_item colelem shared_content" id="about-us" data-content-guid="about-us_content"></a>
+     <a class="anchor_item colelem shared_content" id="events" data-content-guid="events_content"></a>
+     <a class="anchor_item colelem shared_content" id="contact-us" data-content-guid="contact-us_content"></a>
     </div>
-  </div>
-
-  <!-- navigation -->
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Navbar</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#">HITPy</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Activities</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar-static-top/">Portal</a></li>
-              <li><a href="../navbar-fixed-top/">Projects</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-
-  <!-- carousel -->
-
-
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide img-responsive" src="https://images.unsplash.com/photo-1484651890318-ca4110437e20?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h3>Lorizzle ipsizzle dolizzle</h3>
-              <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
-              <p><a class="btn info" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide img-responsive" src="https://images.unsplash.com/photo-1505733934914-e1d6219f1dcb?dpr=1&auto=compress,format&fit=crop&w=1489&h=&q=80&cs=tinysrgb&crop=" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h3>Lorizzle ipsizzle dolizzle</h3>
-              <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
-              <p><a class="btn info" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide img-responsive" src="https://images.unsplash.com/photo-1484651890318-ca4110437e20?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h3>Lorizzle ipsizzle dolizzle</h3>
-              <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
-              <p><a class="btn info" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-
-  <!-- main container -->
-  <div id="main" class="container">
-
-  <!-- hero section -->
-  <div id="hero" class="row"> 
-    <h3 class="text-center">The Hero Section</h3>
-    <hr class="divider"> <!-- divider class --> 
-    <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" class="img-responsive align-left slide-in"> 
-    </div><!-- col-md-4 -->
-    <div class="col-md-8"> 
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor. Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor. Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor. Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle. Dope break yo neck, yall tortor.</p>
-      <button class="btn info">More</button>
-    </div><!-- col-md-8 -->
-  </div><!-- row -->
-
-  <!-- features section -->
-  <div id="features" class="row"> 
-    <h3 class="text-center">Features Section</h3>
-    <hr class="divider"> <!-- divider class --> 
-    <div class="col-md-4">  
-      <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" class="img-responsive">
-      <h3 class="text-center">PyCon</h3>
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-      </p>
-      <button class="btn info">More</button>
-    </div><!-- col-md-4 -->
-    <div class="col-md-4">  
-      <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" class="img-responsive">
-      <h3 class="text-center">PyCon</h3>
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle
-      .</p>
-      <button class="btn info">More</button>
-    </div><!-- col-md-4 -->
-    <div class="col-md-4">  
-      <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" class="img-responsive">
-      <h3 class="text-center">PyCon</h3>
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-      </p>
-      <button class="btn info">More </button>
-    </div><!-- col-md-4 -->
-  </div><!-- row --> 
-
-  <!-- news & events section -->
-  <div id="news" class="row"> 
-    <h3 class="text-center">Events &amp; News Section</h3>
-    <hr class="divider"> <!-- divider class --> 
-    <div class="col-md-6"> 
-      <h3 class="text-center"> Events</h3>
-      <hr class="divider"> <!-- divider class -->
-        <ul>
-          <li>
-            <h3><a href="#">Some catchy headline</a></h3>
-            <p> Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-          </p>
-          </li>     
-          <li>
-            <h3><a href="#">More catchy headlines</a></h3>
-            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-            </p>
-          </li>     
-          <li><h3><a href="#">You thought I was gonna stop?</a></h3>
-            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-            </p>
-          </li>     
-        </ul>
-        <button class="btn info">More Events </button>
-    </div><!-- col-md-6 -->
-    <div class="col-md-6"> 
-      <h3 class="text-center">Events</h3>
-      <hr class="divider"> <!-- divider class -->
-        <ul>
-          <li>
-            <h3><a href="#">Some catchy headline</a></h3>
-            <p> Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-          </p>
-          </li>     
-          <li>
-            <h3><a href="#">More catchy headlines</a></h3>
-            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-            </p>
-          </li>     
-          <li><h3><a href="#">You thought I was gonna stop?</a></h3>
-            <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.
-            </p>
-          </li>     
-        </ul>
-        <button class="btn info">More Events</button>
-    </div><!-- col-md-6 -->
-  </div><!-- row --> 
-
-  <!-- team section --> 
-  <div id="team" class="row"> 
-    <h3 class="text-center">Check Out Our Team</h3>
-    <hr class="divider"><!-- divider class --> 
-    <div class="col-md-4">  
-      <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" class="img-responsive">
-      <h3 class="text-center">PyCon</h3>
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
-      <button class="btn info">More</button>
-    </div><!-- col-md-4 --> 
-    <div class="col-md-4">  
-      <img src="https://images.unsplash.com/photo-1483817101829-339b08e8d83f?dpr=1&auto=compress,format&fit=crop&w=1386&h=&q=80&cs=tinysrgb&crop=" class="img-responsive">
-      <h3 class="text-center">PyCon</h3>
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
-      <button class="btn info">More</button>
-    </div> <!-- col-md-4 --> 
-    <div class="col-md-4">  
-      <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=" class="img-responsive">
-      <h3 class="text-center">PyCon</h3>
-      <p>Lorizzle ipsizzle dolizzle sit gangsta, izzle adipiscing for sure. Check it out bling bling velizzle, get down get down gangster, that's the shizzle quizzle, gravida vizzle, sizzle.</p>
-      <button class="btn info">More</button>
-    </div><!-- col-md-4 --> 
-  </div><!-- row --> 
-</div><!-- container --> 
-
-  <!-- links & tutorials sections --> 
-  <div class="container-fluid">
-    <div class="links"> 
-    <h3 class="text-center"> Useful links &amp; tutorials</h3> 
-      <hr class="divider"> <!-- divider class --> 
-      <div class="container"> 
-        <ul>
-          <li>
-            <a href="https://www.python.org" target="_blank" class="btn orange">Python.org</a> 
-          </li>
-          <li>
-            <a href="http://flask.pocoo.org" target="_blank" class="btn orange">Flask</a>
-          </li>
-          <li>
-            <a href="https://www.djangoproject.com" target="_blank" class="btn orange">Django</a>
-          </li>
-          <li>
-            <a href="http://scikit-learn.org" target="_blank" class="btn orange">Scikit</a>
-          </li>
-          <li>
-            <a href="http://numpy.org" target="_blank" class="btn orange">NumPy</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div><!-- container-fluid --> 
-
-  <hr class="divider"><!-- divider class --> 
-  
-  <!-- footer -->
-  <footer>
-  <div class="container">
-    <div class="row">
-      <div class="footer-left"> 
-        <div class="col-md-2"> 
-          <h3 class="text-center"> Activites</h3>
-            <ul>
-              <li><a href="#">Django</a></li>
-              <li><a href="#">Flask</a></li>
-              <li><a href="#">Hackathons</a></li>
-            </ul>
-        </div><!-- col-md-2 -->
-        <div class="col-md-2"> 
-          <h3 class="text-center"> Blog</h3>
-            <ul>
-              <li><a href="#">Posts</a></li>
-              <li><a href="#">Tags</a></li>
-              <li><a href="#">Archive</a></li>
-              <li><a href="#">Newsletter</a></li>
-            </ul>
-        </div><!-- col-md-2 -->
-        <div class="col-md-2"> 
-          <h3 class="text-center"> Portal</h3>
-          <ul>
-            <li><a href="#">Projetcs</a></li>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Home</a></li>
-            </ul>
-        </div><!-- col-md-2 -->
-      </div>
+    <div class="clearfix grpelem" id="ppu99"><!-- column -->
+     <div class="clearfix colelem" id="pu99"><!-- group -->
+      <div class="browser_width grpelem shared_content" id="u99-bw" data-content-guid="u99-bw_content">
+       <div class="size_browser_width" id="u99"><!-- custom html -->
         
-      <div class="col-md-6"> 
-        <div class="row" id="social"> 
-          <p>Twitter, Facebook</p>
+            
+       </div>
+      </div>
+      <div class="browser_width grpelem shared_content" id="u106-bw" data-content-guid="u106-bw_content">
+       <div id="u106" title="hopme"><!-- simple frame --></div>
+      </div>
+      <a class="nonblock nontext grpelem shared_content" id="u640" href="http://www.facebook.com" data-content-guid="u640_content"><!-- state-based BG images --></a>
+      <a class="nonblock nontext grpelem shared_content" id="u662" href="http://www.twitter.com" data-content-guid="u662_content"><!-- state-based BG images --></a>
+      <a class="nonblock nontext MuseLinkActive clip_frame grpelem shared_content" id="u672" href="index.html" data-content-guid="u672_content"><!-- image --><img class="block temp_no_img_src shared_content" id="u672_img" data-orig-src="images/normal%20gram-u1334.png?crc=4055587076" alt="" width="42" height="42" src="images/blank.gif?crc=4208392903" data-content-guid="u672_img_content"/></a>
+      <a class="nonblock nontext grpelem shared_content" id="u682" href="http://www.twitter.com" data-content-guid="u682_content"><!-- state-based BG images --></a>
+      <a class="nonblock nontext grpelem shared_content" id="u692" href="http://www.twitter.com" data-content-guid="u692_content"><!-- state-based BG images --></a>
+      <div class="SlideShowWidget clearfix grpelem" id="slideshowu1030"><!-- none box -->
+       <div class="popup_anchor" id="u1031popup">
+        <div class="SlideShowContentPanel clearfix" id="u1031"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem" id="u1036"><!-- image -->
+          <img class="block ImageInclude" id="u1036_img" data-src="images/github.png?crc=4096535271" src="images/blank.gif?crc=4208392903" alt="" data-width="360" data-height="360"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem" id="u1154"><!-- image -->
+          <img class="block ImageInclude" id="u1154_img" data-src="images/android_alienwaving_leftfull_.png?crc=4069253551" src="images/blank.gif?crc=4208392903" alt="" data-width="196" data-height="182"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem" id="u1174"><!-- image -->
+          <img class="block ImageInclude" id="u1174_img" data-src="images/compassiot-icon.png?crc=3972138331" src="images/blank.gif?crc=4208392903" alt="" data-width="228" data-height="181"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem" id="u1194"><!-- image -->
+          <img class="block ImageInclude" id="u1194_img" data-src="images/picture2.png?crc=4017006292" src="images/blank.gif?crc=4208392903" alt="" data-width="391" data-height="353"/>
+         </div>
         </div>
-        <div class="row" id="contact-us"> 
-          <p>Email: mail@hitpy.gmail.com</p>
+       </div>
+      </div>
+      <div class="grpelem shared_content" id="u122" data-content-guid="u122_content"><!-- state-based BG images --></div>
+      <a class="anchor_item grpelem shared_content" id="hopme" data-content-guid="hopme_content"></a>
+     </div>
+     <div class="clearfix colelem" id="pu307"><!-- group -->
+      <div class="browser_width grpelem shared_content" id="u307-bw" data-content-guid="u307-bw_content">
+       <div id="u307"><!-- simple frame --></div>
+      </div>
+      <div class="size_fixed grpelem" id="u1325"><!-- custom html -->
+       <span class="shared_content" data-content-guid="u1325_0_content">
+<div class="fb-comments" data-href="PythonDevelopers.com/index.html" data-mobile="false" data-width="100%" data-colorscheme="light" data-action="comment" data-num-posts="5" data-order_by="social"></div>
+</span>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u1912-7" alt="The purpose of this organization is to provide students with a place to foster the growing culture of Python learning and development within the community of the Harare Institute of Technology, and to encourage members to seek out opportunities to expand their knowledge, develop and improve their skills in the programming language. This organization will be open to all students currently registered at the Harare Institute of Technology with or without the knowledge and or programming skills of the language." width="564" height="222" data-orig-src="images/u1912-7.png?crc=291929711" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2011" data-content-guid="u2011_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2011_img" data-orig-src="images/calendar1600.png?crc=30910773" alt="" width="70" height="70" src="images/blank.gif?crc=4208392903" data-content-guid="u2011_img_content"/>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u2021-4" alt="DevFEST 2017" width="296" height="36" data-orig-src="images/u2021-4.png?crc=3785127312" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_img_src" id="u2024-4" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="283" height="242" data-orig-src="images/u2024-4.png?crc=92151399" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2031" data-content-guid="u2031_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2031_img" data-orig-src="images/calendar1600.png?crc=30910773" alt="" width="70" height="70" src="images/blank.gif?crc=4208392903" data-content-guid="u2031_img_content"/>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u2038-4" alt="Python Festival" width="296" height="36" data-orig-src="images/u2038-4.png?crc=170039985" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_img_src" id="u2041-4" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="284" height="242" data-orig-src="images/u2041-4.png?crc=122504707" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_img_src" id="u2044-4" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="284" height="242" data-orig-src="images/u2044-4.png?crc=122504707" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2047" data-content-guid="u2047_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2047_img" data-orig-src="images/calendar1600.png?crc=30910773" alt="" width="70" height="70" src="images/blank.gif?crc=4208392903" data-content-guid="u2047_img_content"/>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u2054-4" alt="Water Hackerthon" width="296" height="36" data-orig-src="images/u2054-4.png?crc=303862463" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_img_src" id="u2212-4" alt="Welcome to HIT Python Developers Club" width="566" height="35" data-orig-src="images/u2212-4.png?crc=252015270" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2367" data-content-guid="u2367_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2367_img" data-orig-src="images/light-bulb-7-256x256.png?crc=4265629655" alt="" width="52" height="52" src="images/blank.gif?crc=4208392903" data-content-guid="u2367_img_content"/>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u2377-4" alt="To learn and to understand the Python programming language through short classes " width="292" height="66" data-orig-src="images/u2377-4.png?crc=4064521651" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2384" data-content-guid="u2384_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2384_img" data-orig-src="images/light-bulb-7-256x256.png?crc=4265629655" alt="" width="52" height="52" src="images/blank.gif?crc=4208392903" data-content-guid="u2384_img_content"/>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u2391-4" alt="To engage in team projects where club members creating something tangible or rather a working prototype" width="292" height="66" data-orig-src="images/u2391-4.png?crc=330436166" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2411" data-content-guid="u2411_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2411_img" data-orig-src="images/light-bulb-7-256x256.png?crc=4265629655" alt="" width="52" height="52" src="images/blank.gif?crc=4208392903" data-content-guid="u2411_img_content"/>
+      </div>
+      <img class="grpelem temp_no_img_src" id="u2418-4" alt="To develop diverse and extensive software development skills to design, develop, implement, test, document and deliver solutions to real world problems " width="292" height="88" data-orig-src="images/u2418-4.png?crc=385176042" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="SlideShowWidget clearfix HeroFillFrame grpelem" id="slideshowu2618"><!-- none box -->
+       <div class="popup_anchor" id="u2619popup">
+        <div class="SlideShowContentPanel clearfix" id="u2619"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem" id="u2620"><!-- image -->
+          <img class="ImageInclude" id="u2620_img" data-src="images/cactus.jpg?crc=491424337" src="images/blank.gif?crc=4208392903" alt="" data-width="1160" data-height="870"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem" id="u2622"><!-- image -->
+          <img class="ImageInclude" id="u2622_img" data-src="images/road.jpg?crc=180693847" src="images/blank.gif?crc=4208392903" alt="" data-width="1160" data-height="870"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem" id="u2624"><!-- image -->
+          <img class="ImageInclude" id="u2624_img" data-src="images/trees.jpg?crc=4071309946" src="images/blank.gif?crc=4208392903" alt="" data-width="1160" data-height="870"/>
+         </div>
         </div>
-        <div class="row" id="address"> 
-          <p>Ganges Road, Belvedere</p>
+       </div>
+       <div class="popup_anchor" id="u2637popup">
+        <div class="SlideShowCaptionPanel clearfix" id="u2637"><!-- stack box -->
+         <div class="SSSlideCaption clearfix grpelem" id="u2640-4"><!-- content -->
+          <div id="u2640-3" class="shared_content" data-content-guid="u2640-3_content">
+           <p>Mauris sit amet tortor.</p>
+          </div>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem" id="u2638-4"><!-- content -->
+          <div id="u2638-3" class="shared_content" data-content-guid="u2638-3_content">
+           <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem" id="u2639-4"><!-- content -->
+          <div id="u2639-3" class="shared_content" data-content-guid="u2639-3_content">
+           <p>Ut eget felis sed velit congue.</p>
+          </div>
+         </div>
         </div>
-      </div><!-- col-md-6 -->
-    </div><!-- row -->
-    <hr class="divider"> 
-    <div class="bottom"> 
-      <p class="text-center"> Copyright &copy; HITPy Dev 2017 </p>
+       </div>
+       <div class="popup_anchor" id="u2633-4popup">
+        <div class="SlideShowLabel SSSlideCount clearfix" id="u2633-4"><!-- content -->
+         <div id="u2633-3" class="shared_content" data-content-guid="u2633-3_content">
+          <p><span id="u2633">3 - 3</span></p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor" id="u2634-4popup">
+        <div class="SSPreviousButton clearfix" id="u2634-4"><!-- content -->
+         <div id="u2634-3" class="shared_content" data-content-guid="u2634-3_content">
+          <p>&lt;</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor" id="u2641-4popup">
+        <div class="SSNextButton clearfix" id="u2641-4"><!-- content -->
+         <div id="u2641-3" class="shared_content" data-content-guid="u2641-3_content">
+          <p>&gt;</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <a class="nonblock nontext anim_swing mse_pre_init shared_content" id="u2811" href="index.html#hopme" data-content-guid="u2811_content"><!-- state-based BG images --></a>
+      <a class="nonblock nontext anim_swing mse_pre_init shared_content" id="u2863" href="index.html#about-us" data-content-guid="u2863_content"><!-- state-based BG images --><img id="u2863_states" alt="About Us" src="images/blank.gif?crc=4208392903" class="shared_content" data-content-guid="u2863_states_content"/></a>
+      <a class="nonblock nontext anim_swing mse_pre_init shared_content" id="u2888" href="index.html#contact-us" data-content-guid="u2888_content"><!-- state-based BG images --><img id="u2888_states" alt="Contact Us" src="images/blank.gif?crc=4208392903" class="shared_content" data-content-guid="u2888_states_content"/></a>
+      <a class="nonblock nontext anim_swing mse_pre_init shared_content" id="u2897" href="index.html#events" data-content-guid="u2897_content"><!-- state-based BG images --><img id="u2897_states" alt="Events" src="images/blank.gif?crc=4208392903" class="shared_content" data-content-guid="u2897_states_content"/></a>
+      <a class="nonblock nontext anim_swing mse_pre_init shared_content" id="u2900" href="index.html#about-us" data-content-guid="u2900_content"><!-- state-based BG images --><img id="u2900_states" alt="Blog" src="images/blank.gif?crc=4208392903" class="shared_content" data-content-guid="u2900_states_content"/></a>
+     </div>
     </div>
+    <div class="clearfix grpelem shared_content" id="pu351" data-content-guid="pu351_content"><!-- group -->
+     <div class="browser_width mse_pre_init shared_content" id="u351-bw" data-content-guid="u351-bw_content">
+      <div id="u351"><!-- simple frame --></div>
+     </div>
+     <div class="browser_width mse_pre_init shared_content" id="u348-bw" data-content-guid="u348-bw_content">
+      <div class="shadow" id="u348"><!-- simple frame --></div>
+     </div>
+    </div>
+    <div class="verticalspacer" data-offset-top="2673" data-content-above-spacer="2672" data-content-below-spacer="112"></div>
+    <div class="clearfix grpelem" id="ppu2962"><!-- column -->
+     <div class="mse_pre_init shared_content" id="u2962" data-content-guid="u2962_content"><!-- state-based BG images --></div>
+     <form class="form-grp clearfix colelem" id="widgetu1252" method="post" enctype="multipart/form-data" action="scripts/form-u1252.php"><!-- none box -->
+      <div class="fld-grp clearfix grpelem" id="widgetu1253" data-required="true"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1254-4" for="widgetu1253_input"><!-- content --><span class="actAsPara shared_content" data-content-guid="u1254-4_0_content">Name:</span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1255-4"><!-- content --><input class="wrapped-input shared_content" type="text" spellcheck="false" id="widgetu1253_input" name="custom_U1253" tabindex="1" data-content-guid="widgetu1253_input_content"/><label class="wrapped-input fld-prompt" id="widgetu1253_prompt" for="widgetu1253_input"><span class="actAsPara shared_content" data-content-guid="widgetu1253_prompt_0_content">Enter Name</span></label></span>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1257" data-required="true" data-type="email"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1259-4" for="widgetu1257_input"><!-- content --><span class="actAsPara shared_content" data-content-guid="u1259-4_0_content">Email:</span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1260-4"><!-- content --><input class="wrapped-input shared_content" type="email" spellcheck="false" id="widgetu1257_input" name="Email" tabindex="2" data-content-guid="widgetu1257_input_content"/><label class="wrapped-input fld-prompt" id="widgetu1257_prompt" for="widgetu1257_input"><span class="actAsPara shared_content" data-content-guid="widgetu1257_prompt_0_content">Enter Email</span></label></span>
+      </div>
+      <div class="clearfix grpelem" id="u1261-4"><!-- content -->
+       <p class="shared_content" data-content-guid="u1261-4_0_content">Submitting Form...</p>
+      </div>
+      <div class="clearfix grpelem" id="u1267-4"><!-- content -->
+       <p class="shared_content" data-content-guid="u1267-4_0_content">The server encountered an error.</p>
+      </div>
+      <div class="clearfix grpelem" id="u1262-4"><!-- content -->
+       <p class="shared_content" data-content-guid="u1262-4_0_content">Form received.</p>
+      </div>
+      <button class="submit-btn NoWrap rounded-corners clearfix grpelem" id="u1268-4" type="submit" value="Submit" tabindex="4"><!-- content -->
+       <div style="margin-top:-12px;height:12px;" class="shared_content" data-content-guid="u1268-4_0_content">
+        <p>Submit</p>
+       </div>
+      </button>
+      <div class="fld-grp clearfix grpelem" id="widgetu1263" data-required="false"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1266-4" for="widgetu1263_input"><!-- content --><span class="actAsPara shared_content" data-content-guid="u1266-4_0_content">Message:</span></label>
+       <span class="fld-textarea actAsDiv clearfix grpelem" id="u1264-4"><!-- content --><textarea class="wrapped-input shared_content" id="widgetu1263_input" name="custom_U1263" tabindex="3" data-content-guid="widgetu1263_input_content"></textarea><label class="wrapped-input fld-prompt" id="widgetu1263_prompt" for="widgetu1263_input"><span class="actAsPara shared_content" data-content-guid="widgetu1263_prompt_0_content">Enter Your Message</span></label></span>
+      </div>
+     </form>
+     <div class="clearfix colelem" id="pu1222"><!-- group -->
+      <div class="browser_width grpelem shared_content" id="u1222-bw" data-content-guid="u1222-bw_content">
+       <div id="u1222"><!-- simple frame --></div>
+      </div>
+      <a class="nonblock nontext anim_swing grpelem shared_content" id="u1975" href="index.html#hopme" data-content-guid="u1975_content"><!-- state-based BG images --></a>
+      <a class="nonblock nontext anim_swing grpelem shared_content" id="u2098" href="index.html#hopme" data-content-guid="u2098_content"><!-- state-based BG images --></a>
+      <div class="grpelem shared_content" id="u2140" data-content-guid="u2140_content"><!-- state-based BG images --></div>
+      <a class="nonblock nontext clip_frame grpelem shared_content" id="u2531" href="http://www.hit.ac.zw" data-content-guid="u2531_content"><!-- image --><img class="block temp_no_img_src shared_content" id="u2531_img" data-orig-src="images/hit_logo.png?crc=485812425" alt="" width="158" height="75" src="images/blank.gif?crc=4208392903" data-content-guid="u2531_img_content"/></a>
+      <img class="grpelem temp_no_img_src" id="u2541-9" alt="Harare Institute of Technology Campus Ganges Road, Belvedere, Harare " width="199" height="85" data-orig-src="images/u2541-9.png?crc=236556292" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem shared_content" id="u2564" data-content-guid="u2564_content"><!-- image -->
+       <img class="block temp_no_img_src shared_content" id="u2564_img" data-orig-src="images/hit%20python%20developers%2020171008_154521.png?crc=461239959" alt="" width="72" height="72" src="images/blank.gif?crc=4208392903" data-content-guid="u2564_img_content"/>
+      </div>
+      <a class="nonblock nontext anim_swing grpelem shared_content" id="u2944" href="index.html#contact-us" data-content-guid="u2944_content"><!-- state-based BG images --></a>
+     </div>
+     <div class="browser_width colelem shared_content" id="u1894-bw" data-content-guid="u1894-bw_content">
+      <div id="u1894"><!-- simple frame --></div>
+     </div>
+    </div>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u640-r.png?crc=4050318844" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u662-r.png?crc=7401268" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-r.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-m.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u692-r.png?crc=108453598" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u122-r.png?crc=246765736" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-r.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-m.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/hopme%20blpue-u2811-a.png?crc=63168944" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-r.png?crc=4030229558" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-a.png?crc=241835513" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-r.png?crc=25732791" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-a.png?crc=4056632142" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-r.png?crc=271148515" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-a.png?crc=298658188" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-r.png?crc=3827772827" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-a.png?crc=3839502762" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2962-r.png?crc=3806780768" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u1975-r.png?crc=4106899234" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2098-r.png?crc=343423997" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2140-r.png?crc=374598561" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2944-r.png?crc=378062764" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
   </div>
-  </footer> 
+  <div class="breakpoint" id="bp_1027" data-min-width="913" data-max-width="1027"><!-- responsive breakpoint node -->
+   <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
+    <div class="clearfix grpelem" id="pevents"><!-- column -->
+     <span class="anchor_item colelem placeholder" data-placeholder-for="events_content"><!-- placeholder node --></span>
+     <span class="anchor_item colelem placeholder" data-placeholder-for="contact-us_content"><!-- placeholder node --></span>
+    </div>
+    <span class="anchor_item grpelem placeholder" data-placeholder-for="about-us_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu99"><!-- column -->
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu99"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u99-bw_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u106-bw_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u640_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u662_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext MuseLinkActive clip_frame grpelem placeholder" data-placeholder-for="u672_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u682_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u692_content"><!-- placeholder node --></span>
+      <div class="SlideShowWidget clearfix grpelem temp_no_id" data-orig-id="slideshowu1030"><!-- none box -->
+       <div class="popup_anchor temp_no_id" data-orig-id="u1031popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-orig-id="u1031"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-orig-id="u1036"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/github.png?crc=4096535271" src="images/blank.gif?crc=4208392903" alt="" data-width="360" data-height="360" data-orig-id="u1036_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-orig-id="u1154"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/android_alienwaving_leftfull_.png?crc=4069253551" src="images/blank.gif?crc=4208392903" alt="" data-width="196" data-height="182" data-orig-id="u1154_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-orig-id="u1174"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/compassiot-icon.png?crc=3972138331" src="images/blank.gif?crc=4208392903" alt="" data-width="228" data-height="181" data-orig-id="u1174_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-orig-id="u1194"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/picture2.png?crc=4017006292" src="images/blank.gif?crc=4208392903" alt="" data-width="391" data-height="353" data-orig-id="u1194_img"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="grpelem placeholder" data-placeholder-for="u122_content"><!-- placeholder node --></span>
+      <span class="anchor_item grpelem placeholder" data-placeholder-for="hopme_content"><!-- placeholder node --></span>
+     </div>
+     <div class="clearfix colelem" id="ppu2811"><!-- group -->
+      <span class="nonblock nontext anim_swing mse_pre_init placeholder" data-placeholder-for="u2811_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing mse_pre_init placeholder" data-placeholder-for="u2863_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing mse_pre_init placeholder" data-placeholder-for="u2897_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing mse_pre_init placeholder" data-placeholder-for="u2900_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing mse_pre_init placeholder" data-placeholder-for="u2888_content"><!-- placeholder node --></span>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu307"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u307-bw_content"><!-- placeholder node --></span>
+      <div class="size_fixed grpelem temp_no_id" data-orig-id="u1325"><!-- custom html -->
+       
+<div class="fb-comments" data-href="PythonDevelopers.com/index.html" data-mobile="false" data-width="100%" data-colorscheme="light" data-action="comment" data-num-posts="5" data-order_by="social"></div>
 
-    <!-- Latest compiled and minified jquery-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
-  </body>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="The purpose of this organization is to provide students with a place to foster the growing culture of Python learning and development within the community of the Harare Institute of Technology, and to encourage members to seek out opportunities to expand their knowledge, develop and improve their skills in the programming language. This organization will be open to all students currently registered at the Harare Institute of Technology with or without the knowledge and or programming skills of the language." width="564" height="222" data-orig-src="images/u1912-72.png?crc=291929711" data-orig-id="u1912-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2011_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="DevFEST 2017" width="296" height="36" data-orig-src="images/u2021-42.png?crc=3785127312" data-orig-id="u2021-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="154" data-orig-src="images/u2024-42.png?crc=3927995175" data-orig-id="u2024-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2031_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Python Festival" width="296" height="36" data-orig-src="images/u2038-42.png?crc=170039985" data-orig-id="u2038-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="142" data-orig-src="images/u2041-42.png?crc=4089401501" data-orig-id="u2041-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="182" data-orig-src="images/u2044-42.png?crc=266755833" data-orig-id="u2044-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2047_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Water Hackerthon" width="296" height="36" data-orig-src="images/u2054-42.png?crc=303862463" data-orig-id="u2054-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Welcome to HIT Python Developers Club" width="566" height="35" data-orig-src="images/u2212-42.png?crc=252015270" data-orig-id="u2212-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2367_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To learn and to understand the Python programming language through short classes " width="292" height="66" data-orig-src="images/u2377-42.png?crc=4064521651" data-orig-id="u2377-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2384_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To engage in team projects where club members creating something tangible or rather a working prototype" width="292" height="66" data-orig-src="images/u2391-42.png?crc=330436166" data-orig-id="u2391-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2411_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To develop diverse and extensive software development skills to design, develop, implement, test, document and deliver solutions to real world problems " width="292" height="88" data-orig-src="images/u2418-42.png?crc=385176042" data-orig-id="u2418-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="SlideShowWidget clearfix HeroFillFrame grpelem temp_no_id" data-orig-id="slideshowu2618"><!-- none box -->
+       <div class="popup_anchor temp_no_id" data-orig-id="u2619popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-orig-id="u2619"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-orig-id="u2620"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-src="images/cactus.jpg?crc=491424337" src="images/blank.gif?crc=4208392903" alt="" data-width="1027" data-height="770" data-orig-id="u2620_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-orig-id="u2622"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-src="images/road.jpg?crc=180693847" src="images/blank.gif?crc=4208392903" alt="" data-width="1027" data-height="770" data-orig-id="u2622_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-orig-id="u2624"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-src="images/trees.jpg?crc=4071309946" src="images/blank.gif?crc=4208392903" alt="" data-width="1027" data-height="770" data-orig-id="u2624_img"/>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor temp_no_id" data-orig-id="u2637popup">
+        <div class="SlideShowCaptionPanel clearfix temp_no_id" data-orig-id="u2637"><!-- stack box -->
+         <div class="SSSlideCaption clearfix grpelem temp_no_id" data-orig-id="u2640-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2640-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-orig-id="u2638-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2638-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-orig-id="u2639-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2639-3_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor temp_no_id" data-orig-id="u2633-4popup">
+        <div class="SlideShowLabel SSSlideCount clearfix temp_no_id" data-orig-id="u2633-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2633-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor temp_no_id" data-orig-id="u2634-4popup">
+        <div class="SSPreviousButton clearfix temp_no_id" data-orig-id="u2634-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2634-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor temp_no_id" data-orig-id="u2641-4popup">
+        <div class="SSNextButton clearfix temp_no_id" data-orig-id="u2641-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2641-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pu351_content"><!-- placeholder node --></span>
+    <div class="verticalspacer" data-offset-top="3799" data-content-above-spacer="3798" data-content-below-spacer="112"></div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu2962"><!-- column -->
+     <span class="mse_pre_init placeholder" data-placeholder-for="u2962_content"><!-- placeholder node --></span>
+     <form class="form-grp clearfix colelem temp_no_id" method="post" enctype="multipart/form-data" action="scripts/form-u1252.php" data-orig-id="widgetu1252"><!-- none box -->
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-orig-id="widgetu1253"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1253_input" data-orig-id="u1254-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1254-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-orig-id="u1255-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1253_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1253_input" data-orig-id="widgetu1253_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1253_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-type="email" data-orig-id="widgetu1257"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1257_input" data-orig-id="u1259-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1259-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-orig-id="u1260-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1257_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1257_input" data-orig-id="widgetu1257_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1257_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-orig-id="u1261-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1261-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-orig-id="u1267-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1267-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-orig-id="u1262-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1262-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <button class="submit-btn NoWrap rounded-corners clearfix grpelem temp_no_id" type="submit" value="Submit" tabindex="8" data-orig-id="u1268-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1268-4_0_content"><!-- placeholder node --></span>
+      </button>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="false" data-orig-id="widgetu1263"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1263_input" data-orig-id="u1266-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1266-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-textarea actAsDiv clearfix grpelem temp_no_id" data-orig-id="u1264-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1263_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1263_input" data-orig-id="widgetu1263_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1263_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+     </form>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu1222"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u1222-bw_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u1975_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u2098_content"><!-- placeholder node --></span>
+      <span class="grpelem placeholder" data-placeholder-for="u2140_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext clip_frame grpelem placeholder" data-placeholder-for="u2531_content"><!-- placeholder node --></span>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Harare Institute of Technology Campus Ganges Road, Belvedere, Harare " width="199" height="85" data-orig-src="images/u2541-92.png?crc=236556292" data-orig-id="u2541-9" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <span class="clip_frame grpelem placeholder" data-placeholder-for="u2564_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u2944_content"><!-- placeholder node --></span>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u1894-bw_content"><!-- placeholder node --></span>
+    </div>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u640-r2.png?crc=4050318844" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u662-r2.png?crc=7401268" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-r2.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-m2.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u692-r2.png?crc=108453598" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u122-r2.png?crc=4002136980" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-r2.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-m2.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/hopme%20blpue-u2811-a2.png?crc=63168944" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-r2.png?crc=4030229558" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-a2.png?crc=241835513" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-r2.png?crc=271148515" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-a2.png?crc=298658188" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-r2.png?crc=3827772827" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-a2.png?crc=3839502762" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-r2.png?crc=25732791" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-a2.png?crc=4056632142" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2962-r2.png?crc=3806780768" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u1975-r2.png?crc=4106899234" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2098-r2.png?crc=343423997" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2140-r2.png?crc=374598561" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2944-r2.png?crc=378062764" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_912" data-min-width="826" data-max-width="912"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <div class="clearfix grpelem temp_no_id shared_content" data-orig-id="pevents" data-content-guid="pevents_content"><!-- column -->
+     <a class="anchor_item colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="events"></a>
+     <a class="anchor_item colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="contact-us"></a>
+    </div>
+    <a class="anchor_item grpelem temp_no_id shared_content" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="about-us" data-content-guid="about-us_content1"></a>
+    <a class="anchor_item grpelem temp_no_id shared_content" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-orig-id="hopme" data-content-guid="hopme_content1"></a>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu99"><!-- column -->
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu99"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u99-bw_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u106-bw_content"><!-- placeholder node --></span>
+      <a class="nonblock nontext grpelem temp_no_id shared_content" href="http://www.facebook.com" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u640" data-content-guid="u640_content1"><!-- state-based BG images --></a>
+      <a class="nonblock nontext grpelem temp_no_id shared_content" href="http://www.twitter.com" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u662" data-content-guid="u662_content1"><!-- state-based BG images --></a>
+      <a class="nonblock nontext MuseLinkActive clip_frame grpelem temp_no_id" href="index.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u672"><!-- image --><span class="block placeholder" data-placeholder-for="u672_img_content"><!-- placeholder node --></span></a>
+      <a class="nonblock nontext grpelem temp_no_id shared_content" href="http://www.twitter.com" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u682" data-content-guid="u682_content1"><!-- state-based BG images --></a>
+      <a class="nonblock nontext grpelem temp_no_id shared_content" href="http://www.twitter.com" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u692" data-content-guid="u692_content1"><!-- state-based BG images --></a>
+      <div class="SlideShowWidget clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="slideshowu1030"><!-- none box -->
+       <div class="popup_anchor temp_no_id" data-orig-id="u1031popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1031"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1036"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/github.png?crc=4096535271" src="images/blank.gif?crc=4208392903" alt="" data-width="360" data-height="360" data-orig-id="u1036_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1154"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/android_alienwaving_leftfull_.png?crc=4069253551" src="images/blank.gif?crc=4208392903" alt="" data-width="196" data-height="182" data-orig-id="u1154_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1174"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/compassiot-icon.png?crc=3972138331" src="images/blank.gif?crc=4208392903" alt="" data-width="228" data-height="181" data-orig-id="u1174_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1194"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/picture2.png?crc=4017006292" src="images/blank.gif?crc=4208392903" alt="" data-width="391" data-height="353" data-orig-id="u1194_img"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="grpelem temp_no_id shared_content" data-orig-id="u122" data-content-guid="u122_content1"><!-- state-based BG images -->
+       <div class="fluid_height_spacer"></div>
+      </div>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u351-bw_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem shared_content" id="pu348" data-content-guid="pu348_content"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u348-bw_content"><!-- placeholder node --></span>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id" href="index.html#hopme" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2811"><!-- state-based BG images --></a>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id" href="index.html#about-us" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2863"><!-- state-based BG images --><span class="placeholder" data-placeholder-for="u2863_states_content"><!-- placeholder node --></span></a>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id" href="index.html#contact-us" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2888"><!-- state-based BG images --><span class="placeholder" data-placeholder-for="u2888_states_content"><!-- placeholder node --></span></a>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id" href="index.html#events" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2897"><!-- state-based BG images --><span class="placeholder" data-placeholder-for="u2897_states_content"><!-- placeholder node --></span></a>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id" href="index.html#about-us" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2900"><!-- state-based BG images --><span class="placeholder" data-placeholder-for="u2900_states_content"><!-- placeholder node --></span></a>
+     </div>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu307"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u307-bw_content"><!-- placeholder node --></span>
+      <div class="size_fixed grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1325"><!-- custom html -->
+       <span class="placeholder" data-placeholder-for="u1325_0_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="The purpose of this organization is to provide students with a place to foster the growing culture of Python learning and development within the community of the Harare Institute of Technology, and to encourage members to seek out opportunities to expand their knowledge, develop and improve their skills in the programming language. This organization will be open to all students currently registered at the Harare Institute of Technology with or without the knowledge and or programming skills of the language." width="564" height="222" data-orig-src="images/u1912-73.png?crc=291929711" data-orig-id="u1912-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2011"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2011_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="DevFEST 2017" width="296" height="36" data-orig-src="images/u2021-43.png?crc=3785127312" data-orig-id="u2021-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="154" data-orig-src="images/u2024-43.png?crc=3927995175" data-orig-id="u2024-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2031"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2031_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Python Festival" width="296" height="36" data-orig-src="images/u2038-43.png?crc=170039985" data-orig-id="u2038-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="142" data-orig-src="images/u2041-43.png?crc=4089401501" data-orig-id="u2041-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="182" data-orig-src="images/u2044-43.png?crc=266755833" data-orig-id="u2044-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2047"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2047_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Water Hackerthon" width="296" height="36" data-orig-src="images/u2054-43.png?crc=303862463" data-orig-id="u2054-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Welcome to HIT Python Developers Club" width="566" height="35" data-orig-src="images/u2212-43.png?crc=252015270" data-orig-id="u2212-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2367"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2367_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To learn and to understand the Python programming language through short classes " width="292" height="66" data-orig-src="images/u2377-43.png?crc=4064521651" data-orig-id="u2377-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2384"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2384_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To engage in team projects where club members creating something tangible or rather a working prototype" width="292" height="66" data-orig-src="images/u2391-43.png?crc=330436166" data-orig-id="u2391-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2411"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2411_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To develop diverse and extensive software development skills to design, develop, implement, test, document and deliver solutions to real world problems " width="292" height="88" data-orig-src="images/u2418-43.png?crc=385176042" data-orig-id="u2418-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="SlideShowWidget clearfix HeroFillFrame grpelem temp_no_id" data-visibility="changed" style="visibility:hidden" data-sizePolicy="fluidWidth" data-pintopage="page_fixedLeft" data-orig-id="slideshowu2618"><!-- none box -->
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="0" data-orig-id="u2619popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-col-pos="0" data-orig-id="u2619"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-col-pos="0" data-orig-id="u2620"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="0" data-src="images/cactus.jpg?crc=491424337" src="images/blank.gif?crc=4208392903" alt="" data-width="912" data-height="684" data-orig-id="u2620_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-col-pos="1" data-orig-id="u2622"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="1" data-src="images/road.jpg?crc=180693847" src="images/blank.gif?crc=4208392903" alt="" data-width="912" data-height="684" data-orig-id="u2622_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-col-pos="2" data-orig-id="u2624"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="2" data-src="images/trees.jpg?crc=4071309946" src="images/blank.gif?crc=4208392903" alt="" data-width="912" data-height="684" data-orig-id="u2624_img"/>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="2" data-orig-id="u2637popup">
+        <div class="SlideShowCaptionPanel clearfix temp_no_id" data-col-pos="2" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2637"><!-- stack box -->
+         <div class="SSSlideCaption clearfix grpelem temp_no_id" data-col-pos="0" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2640-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2640-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-col-pos="1" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2638-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2638-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-col-pos="2" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2639-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2639-3_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="6" data-orig-id="u2633-4popup">
+        <div class="SlideShowLabel SSSlideCount clearfix temp_no_id" data-col-pos="6" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2633-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2633-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="7" data-orig-id="u2634-4popup">
+        <div class="SSPreviousButton clearfix temp_no_id" data-col-pos="7" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2634-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2634-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="8" data-orig-id="u2641-4popup">
+        <div class="SSNextButton clearfix temp_no_id" data-col-pos="8" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2641-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2641-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="verticalspacer shared_content" data-offset-top="3799" data-content-above-spacer="3798" data-content-below-spacer="112" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-content-guid="page_4_content"></div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu2962"><!-- column -->
+     <div class="colelem temp_no_id shared_content" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2962" data-content-guid="u2962_content1"><!-- state-based BG images --></div>
+     <form class="form-grp clearfix colelem temp_no_id" method="post" enctype="multipart/form-data" action="scripts/form-u1252.php" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1252"><!-- none box -->
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1253"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1253_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1254-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1254-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1255-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1253_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1253_input" data-orig-id="widgetu1253_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1253_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-type="email" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1257"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1257_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1259-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1259-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1260-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1257_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1257_input" data-orig-id="widgetu1257_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1257_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1261-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1261-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1267-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1267-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1262-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1262-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <button class="submit-btn NoWrap rounded-corners clearfix grpelem temp_no_id" type="submit" value="Submit" tabindex="12" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1268-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1268-4_0_content"><!-- placeholder node --></span>
+      </button>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="false" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1263"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1263_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1266-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1266-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-textarea actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1264-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1263_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1263_input" data-orig-id="widgetu1263_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1263_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+     </form>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu1222"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u1222-bw_content"><!-- placeholder node --></span>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id shared_content" href="index.html#hopme" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1975" data-content-guid="u1975_content1"><!-- state-based BG images --></a>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id shared_content" href="index.html#hopme" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2098" data-content-guid="u2098_content1"><!-- state-based BG images --></a>
+      <div class="grpelem temp_no_id shared_content" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2140" data-content-guid="u2140_content1"><!-- state-based BG images --></div>
+      <a class="nonblock nontext clip_frame grpelem temp_no_id" href="http://www.hit.ac.zw" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2531"><!-- image --><span class="block placeholder" data-placeholder-for="u2531_img_content"><!-- placeholder node --></span></a>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Harare Institute of Technology Campus Ganges Road, Belvedere, Harare " width="199" height="85" data-orig-src="images/u2541-93.png?crc=236556292" data-orig-id="u2541-9" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2564"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2564_img_content"><!-- placeholder node --></span>
+      </div>
+      <a class="nonblock nontext anim_swing grpelem temp_no_id shared_content" href="index.html#contact-us" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2944" data-content-guid="u2944_content1"><!-- state-based BG images --></a>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u1894-bw_content"><!-- placeholder node --></span>
+    </div>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u640-r3.png?crc=4050318844" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u662-r3.png?crc=7401268" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-r3.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-m3.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u692-r3.png?crc=108453598" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u122-r3.png?crc=4002136980" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-r3.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-m3.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/hopme%20blpue-u2811-a3.png?crc=63168944" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-r3.png?crc=4030229558" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-a3.png?crc=241835513" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-r3.png?crc=25732791" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-a3.png?crc=4056632142" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-r3.png?crc=271148515" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-a3.png?crc=298658188" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-r3.png?crc=3827772827" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-a3.png?crc=3839502762" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2962-r3.png?crc=3806780768" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u1975-r3.png?crc=4106899234" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2098-r3.png?crc=343423997" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2140-r3.png?crc=374598561" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2944-r3.png?crc=378062764" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_825" data-min-width="801" data-max-width="825"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pevents_content"><!-- placeholder node --></span>
+    <span class="anchor_item grpelem placeholder" data-placeholder-for="about-us_content1"><!-- placeholder node --></span>
+    <span class="anchor_item grpelem placeholder" data-placeholder-for="hopme_content1"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu99"><!-- column -->
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu99"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u99-bw_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u106-bw_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u640_content1"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u662_content1"><!-- placeholder node --></span>
+      <a class="nonblock nontext MuseLinkActive clip_frame grpelem temp_no_id" href="index.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u672"><!-- image --><span class="block placeholder" data-placeholder-for="u672_img_content"><!-- placeholder node --></span></a>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u682_content1"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u692_content1"><!-- placeholder node --></span>
+      <div class="SlideShowWidget clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="slideshowu1030"><!-- none box -->
+       <div class="popup_anchor temp_no_id" data-orig-id="u1031popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1031"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1036"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/github.png?crc=4096535271" src="images/blank.gif?crc=4208392903" alt="" data-width="360" data-height="360" data-orig-id="u1036_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1154"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/android_alienwaving_leftfull_.png?crc=4069253551" src="images/blank.gif?crc=4208392903" alt="" data-width="196" data-height="182" data-orig-id="u1154_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1174"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/compassiot-icon.png?crc=3972138331" src="images/blank.gif?crc=4208392903" alt="" data-width="228" data-height="181" data-orig-id="u1174_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1194"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/picture2.png?crc=4017006292" src="images/blank.gif?crc=4208392903" alt="" data-width="391" data-height="353" data-orig-id="u1194_img"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="grpelem placeholder" data-placeholder-for="u122_content1"><!-- placeholder node --></span>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u351-bw_content"><!-- placeholder node --></span>
+     <span class="clearfix colelem placeholder" data-placeholder-for="pu348_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu307"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u307-bw_content"><!-- placeholder node --></span>
+      <div class="size_fixed grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1325"><!-- custom html -->
+       <span class="placeholder" data-placeholder-for="u1325_0_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="The purpose of this organization is to provide students with a place to foster the growing culture of Python learning and development within the community of the Harare Institute of Technology, and to encourage members to seek out opportunities to expand their knowledge, develop and improve their skills in the programming language. This organization will be open to all students currently registered at the Harare Institute of Technology with or without the knowledge and or programming skills of the language." width="564" height="222" data-orig-src="images/u1912-74.png?crc=291929711" data-orig-id="u1912-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2011"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2011_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="DevFEST 2017" width="296" height="36" data-orig-src="images/u2021-44.png?crc=3785127312" data-orig-id="u2021-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="154" data-orig-src="images/u2024-44.png?crc=3927995175" data-orig-id="u2024-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2031"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2031_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Python Festival" width="296" height="36" data-orig-src="images/u2038-44.png?crc=170039985" data-orig-id="u2038-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="142" data-orig-src="images/u2041-44.png?crc=4089401501" data-orig-id="u2041-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="182" data-orig-src="images/u2044-44.png?crc=266755833" data-orig-id="u2044-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2047"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2047_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Water Hackerthon" width="296" height="36" data-orig-src="images/u2054-44.png?crc=303862463" data-orig-id="u2054-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Welcome to HIT Python Developers Club" width="566" height="35" data-orig-src="images/u2212-44.png?crc=252015270" data-orig-id="u2212-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2367"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2367_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To learn and to understand the Python programming language through short classes " width="292" height="66" data-orig-src="images/u2377-44.png?crc=4064521651" data-orig-id="u2377-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2384"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2384_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To engage in team projects where club members creating something tangible or rather a working prototype" width="292" height="66" data-orig-src="images/u2391-44.png?crc=330436166" data-orig-id="u2391-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2411"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2411_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To develop diverse and extensive software development skills to design, develop, implement, test, document and deliver solutions to real world problems " width="292" height="88" data-orig-src="images/u2418-44.png?crc=385176042" data-orig-id="u2418-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="SlideShowWidget clearfix HeroFillFrame grpelem temp_no_id" data-visibility="changed" style="visibility:hidden" data-sizePolicy="fluidWidth" data-pintopage="page_fixedLeft" data-orig-id="slideshowu2618"><!-- none box -->
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="0" data-orig-id="u2619popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-col-pos="0" data-orig-id="u2619"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-col-pos="0" data-orig-id="u2620"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="0" data-src="images/cactus.jpg?crc=491424337" src="images/blank.gif?crc=4208392903" alt="" data-width="825" data-height="619" data-orig-id="u2620_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-col-pos="1" data-orig-id="u2622"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="1" data-src="images/road.jpg?crc=180693847" src="images/blank.gif?crc=4208392903" alt="" data-width="825" data-height="619" data-orig-id="u2622_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-col-pos="2" data-orig-id="u2624"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="2" data-src="images/trees.jpg?crc=4071309946" src="images/blank.gif?crc=4208392903" alt="" data-width="825" data-height="619" data-orig-id="u2624_img"/>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="2" data-orig-id="u2637popup">
+        <div class="SlideShowCaptionPanel clearfix temp_no_id" data-col-pos="2" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2637"><!-- stack box -->
+         <div class="SSSlideCaption clearfix grpelem temp_no_id" data-col-pos="0" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2640-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2640-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-col-pos="1" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2638-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2638-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-col-pos="2" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2639-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2639-3_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="6" data-orig-id="u2633-4popup">
+        <div class="SlideShowLabel SSSlideCount clearfix temp_no_id" data-col-pos="6" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2633-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2633-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="7" data-orig-id="u2634-4popup">
+        <div class="SSPreviousButton clearfix temp_no_id" data-col-pos="7" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2634-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2634-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="8" data-orig-id="u2641-4popup">
+        <div class="SSNextButton clearfix temp_no_id" data-col-pos="8" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2641-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2641-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="verticalspacer placeholder" data-placeholder-for="page_4_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu2962"><!-- column -->
+     <span class="colelem placeholder" data-placeholder-for="u2962_content1"><!-- placeholder node --></span>
+     <form class="form-grp clearfix colelem temp_no_id" method="post" enctype="multipart/form-data" action="scripts/form-u1252.php" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1252"><!-- none box -->
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1253"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1253_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1254-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1254-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1255-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1253_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1253_input" data-orig-id="widgetu1253_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1253_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-type="email" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1257"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1257_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1259-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1259-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1260-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1257_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1257_input" data-orig-id="widgetu1257_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1257_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1261-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1261-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1267-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1267-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1262-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1262-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <button class="submit-btn NoWrap rounded-corners clearfix grpelem temp_no_id" type="submit" value="Submit" tabindex="16" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1268-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1268-4_0_content"><!-- placeholder node --></span>
+      </button>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="false" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1263"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1263_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1266-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1266-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-textarea actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1264-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1263_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1263_input" data-orig-id="widgetu1263_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1263_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+     </form>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu1222"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u1222-bw_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u1975_content1"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u2098_content1"><!-- placeholder node --></span>
+      <span class="grpelem placeholder" data-placeholder-for="u2140_content1"><!-- placeholder node --></span>
+      <a class="nonblock nontext clip_frame grpelem temp_no_id" href="http://www.hit.ac.zw" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2531"><!-- image --><span class="block placeholder" data-placeholder-for="u2531_img_content"><!-- placeholder node --></span></a>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Harare Institute of Technology Campus Ganges Road, Belvedere, Harare " width="199" height="85" data-orig-src="images/u2541-94.png?crc=236556292" data-orig-id="u2541-9" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2564"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2564_img_content"><!-- placeholder node --></span>
+      </div>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u2944_content1"><!-- placeholder node --></span>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u1894-bw_content"><!-- placeholder node --></span>
+    </div>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u640-r4.png?crc=4050318844" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u662-r4.png?crc=7401268" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-r4.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-m4.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u692-r4.png?crc=108453598" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u122-r4.png?crc=4078102334" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-r4.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-m4.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/hopme%20blpue-u2811-a4.png?crc=63168944" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-r4.png?crc=4030229558" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-a4.png?crc=241835513" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-r4.png?crc=25732791" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-a4.png?crc=4056632142" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-r4.png?crc=271148515" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-a4.png?crc=298658188" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-r4.png?crc=3827772827" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-a4.png?crc=3839502762" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2962-r4.png?crc=3806780768" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u1975-r4.png?crc=4106899234" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2098-r4.png?crc=343423997" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2140-r4.png?crc=374598561" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2944-r4.png?crc=378062764" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_800" data-max-width="800"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pevents_content"><!-- placeholder node --></span>
+    <span class="anchor_item grpelem placeholder" data-placeholder-for="about-us_content1"><!-- placeholder node --></span>
+    <span class="anchor_item grpelem placeholder" data-placeholder-for="hopme_content1"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu99"><!-- column -->
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu99"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u99-bw_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u106-bw_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u640_content1"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u662_content1"><!-- placeholder node --></span>
+      <a class="nonblock nontext MuseLinkActive clip_frame grpelem temp_no_id" href="index.html" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u672"><!-- image --><span class="block placeholder" data-placeholder-for="u672_img_content"><!-- placeholder node --></span></a>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u682_content1"><!-- placeholder node --></span>
+      <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u692_content1"><!-- placeholder node --></span>
+      <div class="SlideShowWidget clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="slideshowu1030"><!-- none box -->
+       <div class="popup_anchor temp_no_id" data-orig-id="u1031popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1031"><!-- stack box -->
+         <div class="SSSlide clip_frame clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1036"><!-- image -->
+          <img class="ImageInclude position_content temp_no_id" data-src="images/github.png?crc=4096535271" src="images/blank.gif?crc=4208392903" alt="" data-width="360" data-height="360" data-orig-id="u1036_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1154"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/android_alienwaving_leftfull_.png?crc=4069253551" src="images/blank.gif?crc=4208392903" alt="" data-width="196" data-height="182" data-orig-id="u1154_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1174"><!-- image -->
+          <img class="block ImageInclude temp_no_id" data-src="images/compassiot-icon.png?crc=3972138331" src="images/blank.gif?crc=4208392903" alt="" data-width="228" data-height="181" data-orig-id="u1174_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1194"><!-- image -->
+          <img class="ImageInclude position_content temp_no_id" data-src="images/picture2.png?crc=4017006292" src="images/blank.gif?crc=4208392903" alt="" data-width="391" data-height="353" data-orig-id="u1194_img"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="grpelem placeholder" data-placeholder-for="u122_content1"><!-- placeholder node --></span>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u351-bw_content"><!-- placeholder node --></span>
+     <span class="clearfix colelem placeholder" data-placeholder-for="pu348_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu307"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u307-bw_content"><!-- placeholder node --></span>
+      <div class="size_fixed grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1325"><!-- custom html -->
+       <span class="placeholder" data-placeholder-for="u1325_0_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="The purpose of this organization is to provide students with a place to foster the growing culture of Python learning and development within the community of the Harare Institute of Technology, and to encourage members to seek out opportunities to expand their knowledge, develop and improve their skills in the programming language. This organization will be open to all students currently registered at the Harare Institute of Technology with or without the knowledge and or programming skills of the language." width="564" height="222" data-orig-src="images/u1912-75.png?crc=291929711" data-orig-id="u1912-7" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2011"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2011_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="DevFEST 2017" width="296" height="36" data-orig-src="images/u2021-45.png?crc=3785127312" data-orig-id="u2021-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="154" data-orig-src="images/u2024-45.png?crc=3927995175" data-orig-id="u2024-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2031"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2031_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Python Festival" width="296" height="36" data-orig-src="images/u2038-45.png?crc=170039985" data-orig-id="u2038-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="142" data-orig-src="images/u2041-45.png?crc=4089401501" data-orig-id="u2041-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed augue non leo mattis feugiat in eget dolor. Sed ac faucibus odio. Donec id dui eu mauris ultricies tincidunt. Nullam arcu erat, hendrerit nec condimentum in, porttitor a diam. Curabitur vel nunc ut est accumsan dignissim sed nec ante. In sit amet velit et mi sagittis fermentum vel quis tortor. Suspendisse id quam sit amet ex faucibus dapibus. " width="540" height="182" data-orig-src="images/u2044-45.png?crc=266755833" data-orig-id="u2044-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2047"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2047_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Water Hackerthon" width="296" height="36" data-orig-src="images/u2054-45.png?crc=303862463" data-orig-id="u2054-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Welcome to HIT Python Developers Club" width="566" height="35" data-orig-src="images/u2212-45.png?crc=252015270" data-orig-id="u2212-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2367"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2367_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To learn and to understand the Python programming language through short classes " width="292" height="66" data-orig-src="images/u2377-45.png?crc=4064521651" data-orig-id="u2377-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2384"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2384_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To engage in team projects where club members creating something tangible or rather a working prototype" width="292" height="66" data-orig-src="images/u2391-45.png?crc=330436166" data-orig-id="u2391-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2411"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2411_img_content"><!-- placeholder node --></span>
+      </div>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="To develop diverse and extensive software development skills to design, develop, implement, test, document and deliver solutions to real world problems " width="292" height="88" data-orig-src="images/u2418-45.png?crc=385176042" data-orig-id="u2418-4" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="SlideShowWidget clearfix HeroFillFrame grpelem temp_no_id" data-visibility="changed" style="visibility:hidden" data-sizePolicy="fluidWidth" data-pintopage="page_fixedLeft" data-orig-id="slideshowu2618"><!-- none box -->
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="0" data-orig-id="u2619popup">
+        <div class="SlideShowContentPanel clearfix temp_no_id" data-col-pos="0" data-orig-id="u2619"><!-- stack box -->
+         <div class="SSSlide clip_frame grpelem temp_no_id" data-col-pos="0" data-orig-id="u2620"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="0" data-src="images/cactus.jpg?crc=491424337" src="images/blank.gif?crc=4208392903" alt="" data-width="800" data-height="600" data-orig-id="u2620_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-col-pos="1" data-orig-id="u2622"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="1" data-src="images/road.jpg?crc=180693847" src="images/blank.gif?crc=4208392903" alt="" data-width="800" data-height="600" data-orig-id="u2622_img"/>
+         </div>
+         <div class="SSSlide invi clip_frame grpelem temp_no_id" data-col-pos="2" data-orig-id="u2624"><!-- image -->
+          <img class="ImageInclude temp_no_id" data-col-pos="2" data-src="images/trees.jpg?crc=4071309946" src="images/blank.gif?crc=4208392903" alt="" data-width="800" data-height="600" data-orig-id="u2624_img"/>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="2" data-orig-id="u2637popup">
+        <div class="SlideShowCaptionPanel clearfix temp_no_id" data-col-pos="2" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2637"><!-- stack box -->
+         <div class="SSSlideCaption clearfix grpelem temp_no_id" data-col-pos="0" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2640-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2640-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-col-pos="1" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2638-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2638-3_content"><!-- placeholder node --></span>
+         </div>
+         <div class="SSSlideCaption invi clearfix grpelem temp_no_id" data-col-pos="2" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2639-4"><!-- content -->
+          <span class="placeholder" data-placeholder-for="u2639-3_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="6" data-orig-id="u2633-4popup">
+        <div class="SlideShowLabel SSSlideCount clearfix temp_no_id" data-col-pos="6" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2633-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2633-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="7" data-orig-id="u2634-4popup">
+        <div class="SSPreviousButton clearfix temp_no_id" data-col-pos="7" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2634-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2634-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="8" data-orig-id="u2641-4popup">
+        <div class="SSNextButton clearfix temp_no_id" data-col-pos="8" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2641-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u2641-3_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="verticalspacer placeholder" data-placeholder-for="page_4_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu2962"><!-- column -->
+     <span class="colelem placeholder" data-placeholder-for="u2962_content1"><!-- placeholder node --></span>
+     <form class="form-grp clearfix colelem temp_no_id" method="post" enctype="multipart/form-data" action="scripts/form-u1252.php" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1252"><!-- none box -->
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1253"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1253_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1254-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1254-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1255-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1253_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1253_input" data-orig-id="widgetu1253_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1253_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="true" data-type="email" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1257"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1257_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1259-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1259-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1260-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1257_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1257_input" data-orig-id="widgetu1257_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1257_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1261-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1261-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1267-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1267-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <div class="clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1262-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1262-4_0_content"><!-- placeholder node --></span>
+      </div>
+      <button class="submit-btn NoWrap rounded-corners clearfix grpelem temp_no_id" type="submit" value="Submit" tabindex="20" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1268-4"><!-- content -->
+       <span class="placeholder" data-placeholder-for="u1268-4_0_content"><!-- placeholder node --></span>
+      </button>
+      <div class="fld-grp clearfix grpelem temp_no_id" data-required="false" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="widgetu1263"><!-- none box -->
+       <label class="fld-label actAsDiv clearfix grpelem temp_no_id" for="widgetu1263_input" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1266-4"><!-- content --><span class="actAsPara placeholder" data-placeholder-for="u1266-4_0_content"><!-- placeholder node --></span></label>
+       <span class="fld-textarea actAsDiv clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u1264-4"><!-- content --><span class="wrapped-input placeholder" data-placeholder-for="widgetu1263_input_content"><!-- placeholder node --></span><label class="wrapped-input fld-prompt temp_no_id" for="widgetu1263_input" data-orig-id="widgetu1263_prompt"><span class="actAsPara placeholder" data-placeholder-for="widgetu1263_prompt_0_content"><!-- placeholder node --></span></label></span>
+      </div>
+     </form>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu1222"><!-- group -->
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u1222-bw_content"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u1975_content1"><!-- placeholder node --></span>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u2098_content1"><!-- placeholder node --></span>
+      <span class="grpelem placeholder" data-placeholder-for="u2140_content1"><!-- placeholder node --></span>
+      <a class="nonblock nontext clip_frame grpelem temp_no_id" href="http://www.hit.ac.zw" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2531"><!-- image --><span class="block placeholder" data-placeholder-for="u2531_img_content"><!-- placeholder node --></span></a>
+      <img class="grpelem temp_no_id temp_no_img_src" alt="Harare Institute of Technology Campus Ganges Road, Belvedere, Harare " width="199" height="85" data-orig-src="images/u2541-95.png?crc=236556292" data-orig-id="u2541-9" src="images/blank.gif?crc=4208392903"/><!-- rasterized frame -->
+      <div class="clip_frame grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedLeft" data-orig-id="u2564"><!-- image -->
+       <span class="block placeholder" data-placeholder-for="u2564_img_content"><!-- placeholder node --></span>
+      </div>
+      <span class="nonblock nontext anim_swing grpelem placeholder" data-placeholder-for="u2944_content1"><!-- placeholder node --></span>
+     </div>
+     <span class="browser_width colelem placeholder" data-placeholder-for="u1894-bw_content"><!-- placeholder node --></span>
+    </div>
+   </div>
+   <div class="preload_images">
+    <img class="preload temp_no_img_src" data-orig-src="images/u640-r5.png?crc=4050318844" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u662-r5.png?crc=7401268" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-r5.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u682-m5.png?crc=153708866" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u692-r5.png?crc=108453598" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u122-r5.png?crc=4280603994" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-r5.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/home%20gray-u2811-m5.png?crc=3924583754" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/hopme%20blpue-u2811-a5.png?crc=63168944" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-r5.png?crc=4030229558" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2863_states-a5.png?crc=241835513" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-r5.png?crc=25732791" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2888_states-a5.png?crc=4056632142" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-r5.png?crc=271148515" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2897_states-a5.png?crc=298658188" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-r5.png?crc=3827772827" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2900_states-a5.png?crc=3839502762" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2962-r5.png?crc=3806780768" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u1975-r5.png?crc=4106899234" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2098-r5.png?crc=343423997" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2140-r5.png?crc=374598561" alt="" src="images/blank.gif?crc=4208392903"/>
+    <img class="preload temp_no_img_src" data-orig-src="images/u2944-r5.png?crc=378062764" alt="" src="images/blank.gif?crc=4208392903"/>
+   </div>
+  </div>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   // Decide weather to suppress missing file error or not based on preference setting
+var suppressMissingFileError = false
+</script>
+  <script type="text/javascript">
+   window.Muse.assets.check=function(d){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},c=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
+16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),h=0;h<f.length;h++)if("text/css"==f[h].type){var i=(f[h].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!i||!i[1]||!i[2])break;b[i[1]]=i[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(h=0;h<Muse.assets.required.length;){var i=Muse.assets.required[h],l=i.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
+l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
+f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(f+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(f)):alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
+setTimeout(function(){g(!0)},5E3):g()}};
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.watch","webpro","musewpslideshow","jquery.museoverlay","touchswipe","jquery.scrolleffects","jquery.museresponsive"],function(d){var $ = d;$(document).ready(function(){try{
+window.Muse.assets.check($);/* body */
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
+Muse.Utils.resizeHeight('.popup_anchor.allow_click_through');/* resize height */
+Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
+Muse.Utils.initWidget('#slideshowu1030', ['#bp_infinity', '#bp_1027', '#bp_912', '#bp_825', '#bp_800'], function(elem) { var widget = new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'horizontal',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'off',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:false}); $(elem).data('widget', widget); return widget; });/* #slideshowu1030 */
+Muse.Utils.initWidget('#slideshowu2618', ['#bp_infinity', '#bp_1027'], function(elem) { var widget = new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'fullWidth',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:false}); $(elem).data('widget', widget); return widget; });/* #slideshowu2618 */
+Muse.Utils.initWidget('#widgetu1252', ['#bp_infinity', '#bp_1027', '#bp_912', '#bp_825', '#bp_800'], function(elem) { return new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu1252 */
+Muse.Utils.initWidget('#slideshowu2618', ['#bp_912', '#bp_825', '#bp_800'], function(elem) { var widget = new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'fullWidth',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:true}); $(elem).data('widget', widget); return widget; });/* #slideshowu2618 */
+Muse.Utils.fullPage('#page');/* 100% height page */
+$('#bp_1027').one('muse_this_bp_activate', function(){
+$('#u2811').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+$('#u2863').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,567.1]},{"speed":[0,0],"in":[567.1,Infinity]}], $(this)); /* scroll effect */
+$('#u2897').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,567.1]},{"speed":[0,0],"in":[567.1,Infinity]}], $(this)); /* scroll effect */
+$('#u2900').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,567.1]},{"speed":[0,0],"in":[567.1,Infinity]}], $(this)); /* scroll effect */
+$('#u2888').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,567.1]},{"speed":[0,0],"in":[567.1,Infinity]}], $(this)); /* scroll effect */
+$('#u351-bw').registerPositionScrollEffect([{"speed":[null,1],"in":[-Infinity,660]},{"speed":[null,0],"in":[660,Infinity]}], $(this)); /* scroll effect */
+$('#u348-bw').registerPositionScrollEffect([{"speed":[null,1],"in":[-Infinity,564]},{"speed":[null,0],"in":[564,Infinity]}], $(this)); /* scroll effect */
+$('#u2962').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,565.05]},{"speed":[0,0],"in":[565.05,Infinity]}], $(this)); /* scroll effect */
+});/* scroll effects for one breakpoint */
+$('#bp_infinity').one('muse_this_bp_activate', function(){
+$('#u2811').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+$('#u2863').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+$('#u2888').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+$('#u2897').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+$('#u2900').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+$('#u351-bw').registerPositionScrollEffect([{"speed":[null,1],"in":[-Infinity,660]},{"speed":[null,0],"in":[660,Infinity]}], $(this)); /* scroll effect */
+$('#u348-bw').registerPositionScrollEffect([{"speed":[null,1],"in":[-Infinity,564]},{"speed":[null,0],"in":[564,Infinity]}], $(this)); /* scroll effect */
+$('#u2962').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,563.6]},{"speed":[0,0],"in":[563.6,Infinity]}], $(this)); /* scroll effect */
+});/* scroll effects for one breakpoint */
+$( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
+
+</script>
+  <!-- RequireJS script -->
+  <script src="{{ url_for('static', filename='landingPage/scripts/require.js') }}" type="text/javascript" async data-main="{{ url_for('static', filename='landingPage/scripts/museconfig.js') }}" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
+   </body>
 </html>
