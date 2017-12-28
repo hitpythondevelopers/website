@@ -1,0 +1,20 @@
+#This file specifies the directories and files that should not be tracked by git
+
+
+# Byte-compiled
+*.pyc
+
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+
+# Environments
+env/
+venv/
+ENV/
+.env
+.venv
+env.bak/
+venv.bak/
