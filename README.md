@@ -1,10 +1,24 @@
-# website
-HIT Py developers website
-
-after cloning the repo run the following commands to start contributing 
-1. Create and activate your virtual environment
-2. Install dependencies by running pip install -r requirements.txt
-3. git checkout branchname -- where branch name is the name of the branch your team is working on
+# HIT.PY Dev
+Website for a Harare Institute of Technology python developers.
 
 
-please note COMMIT OFTEN AND COMMIT EARLY!!!!
+### Getting Started
+
+1. Create and activate your virtual environment.
+2. git clone https://github.com/HITpyDevs/website.git
+3. pip install requirements.txt -r
+
+### Prerequisites
+
+* python 3.6
+* sqlite3
+
+#### Task list
+
+- [ ] Setup a simple website
+- [ ] Improve the UI
+- [ ] Add more features
+
+### Acknowledgements
+ * @tatmush
+ 
