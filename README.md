@@ -19,6 +19,4 @@ Website for a Harare Institute of Technology python developers.
 - [ ] Improve the UI
 - [ ] Add more features
 
-### Acknowledgements
- * @tatmush
  
