@@ -1,5 +1,5 @@
 # HIT.PY Dev
-Website for a Harare Institute of Technology python developers.
+Website for python developers of Harare Institute of Technology.
 
 
 ### Getting Started
