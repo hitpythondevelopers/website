@@ -7,7 +7,7 @@ Website for a Harare Institute of Technology python developers.
 1. Create and activate your virtual environment.
 2. git clone https://github.com/HITpyDevs/website.git
 3. pip install requirements.txt -r
-4. begin Contributions
+4. Begin Contributions
 
 ### Prerequisites
 
